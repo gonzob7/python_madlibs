@@ -235,11 +235,120 @@ def topic2():
         print("Thanks for playing!")
 
 
+def topic3():
+    print("Fill in the blanks below with whatever words you like.")
+    time.sleep(1)
+    print("If at any time you can't think of a word, just input the letter R and the program will generate a random word for you.")
+    time.sleep(1)
+    print(" ")
+    print("The theme is: Prom")
+    adjective1 = input("Adjective #1: ")
+    adjectiveList.append(adjective1)
+    if adjective1 == "R" or adjective1 == "r":
+        adjective1 = random.choice(adjectiveList)
+    time.sleep(.5)
+    adjective2 = input("Adjective #2: ")
+    adjectiveList.append(adjective2)
+    if adjective2 == "R" or adjective2 == "r":
+        adjective2 = random.choice(adjectiveList)
+    time.sleep(.5)
+    adjective3 = input("Adjective #3: ")
+    adjectiveList.append(adjective3)
+    if adjective3 == "R" or adjective3 == "r":
+        adjective3 = random.choice(adjectiveList)
+    time.sleep(.5)
+    noun1 = input("Noun #1: ")
+    nounList.append(noun1)
+    if noun1 == "R" or noun1 == "r":
+        noun1 = random.choice(nounList)
+    time.sleep(.5)
+    noun2 = input("Noun #2: ")
+    nounList.append(noun2)
+    if noun2 == "R" or noun2 == "r":
+        noun2 = random.choice(nounList)
+    time.sleep(.5)
+    noun3 = input("Noun #3: ")
+    nounList.append(noun3)
+    if noun3 == "R" or noun3 == "r":
+        noun3 = random.choice(nounList)
+    time.sleep(.5)
+    noun4 = input("Noun #4: ")
+    nounList.append(noun4)
+    if noun4 == "R" or noun4 == "r":
+        noun4 = random.choice(nounList)
+    time.sleep(.5)
+    noun5 = input("Noun #5: ")
+    nounList.append(noun5)
+    if noun5 == "R" or noun5 == "r":
+        noun5 = random.choice(nounList)
+    time.sleep(.5)
+    noun6 = input("Noun #6: ")
+    nounList.append(noun6)
+    if noun6 == "R" or noun6 == "r":
+        noun6 = random.choice(nounList)
+    time.sleep(.5)
+    noun7 = input("Noun #7: ")
+    nounList.append(noun7)
+    if noun7 == "R" or noun7 == "r":
+        noun7 = random.choice(nounList)
+    time.sleep(.5)
+    bodyPart1 = input("Bodypart #1: ")
+    bodyPartList.append(bodyPart1)
+    if bodyPart1 == "R" or bodyPart1 == "r":
+        bodyPart1 = random.choice(bodyPartList)
+    time.sleep(.5)
+    bodyPart2 = input("Bodypart #2: ")
+    bodyPartList.append(bodyPart2)
+    if bodyPart2 == "R" or bodyPart2 == "r":
+        bodyPart2 = random.choice(bodyPartList)
+    time.sleep(.5)
+    pastTenseVerb = input("Past Tense Verb: ")
+    pastTenseList.append(pastTenseVerb)
+    if pastTenseVerb == "R" or pastTenseVerb == "r":
+        pastTenseVerb = random.choice(pastTenseList)
+    time.sleep(.5)
+    pNoun1 = input("Plural Noun #1: ")
+    if pNoun1 == "R" or pNoun1 == "r":
+        pNoun1 = random.choice(pluralNounList)
+    time.sleep(.5)
+    pNoun2 = input("Plural Noun #2: ")
+    if pNoun2 == "R" or pNoun2 == "r":
+        pNoun2 = random.choice(pluralNounList)
+    verbEnd = input("Verb inding in ING: ")
+    if verbEnd == "R" or verbEnd == "r":
+        verbEnd = random.choice(verbINGList)
+    print("Thank you for all you inputs, your mad lib is being compiled...")
+    time.sleep(3)
+    print(" ")
+    print("If there's a melody you can't seem to get out of your " + colored(bodyPart1,"cyan"))
+    print("or a song running through your " + colored(bodyPart2,"cyan") + ", then bring your")
+    print("feet to this year's " + colored(adjective1,"cyan") + " prom. As usual, our " + colored(noun1,"cyan"))
+    print("will be held in our high school " + colored(noun2,"cyan") + ". A dress code will be")
+    print("observed. No one will be admitted wearing " + colored(pastTenseVerb,"cyan") + " or")
+    print("torn " + colored(pNoun1,"cyan") + ". Girls must wear a " + colored(noun3,"cyan") + " and")
+    print("boys must wear a dress shirt and a " + colored(noun4,"cyan") + ". As always, hot")
+    print(colored(pNoun2,"cyan") + " will be served, and there will be " + colored(adjective2,"cyan"))
+    print("prizes and an award for the best-" + colored(verbEnd,"cyan") + " couple. The")
+    print(colored(adjective3,"cyan") + " dance committee is also proud to announce that")
+    print("every girl who attends will receive a " + colored(noun5,"cyan") + " to pin to her")
+    print(colored(noun6,"cyan") + ", and every boy will receive a complimentary " + colored(noun7,"cyan") + "!")
+    print(" ")
+    tryAgain = input("Would you like to try again? (Y/N): ")
+    if tryAgain == "Y" or tryAgain == "y":
+        time.sleep(1)
+        print(" ")
+        topicScreen()
+    elif tryAgain == "N" or tryAgain == "n":
+        time.sleep(1)
+        print(" ")
+        print("Thanks for playing!")
+
 def topicScreen():
     print("What topic would you like?")
     time.sleep(1)
     print("1.Amusement Park")
     print("2.Zoo")
+    print("3.Prom")
 
     time.sleep(.5)
     topicChosen = input("1/2: ")
@@ -248,6 +357,8 @@ def topicScreen():
         topic1()
     elif topicChosen == "2":
         topic2()
+    elif topicChosen == "3":
+        topic3()
 
 #------------------------------------------Execution-----------------------------------------------------#
 
