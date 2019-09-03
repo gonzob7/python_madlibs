@@ -3,6 +3,7 @@
 import time
 import random
 from termcolor import colored
+import sys
 
 #-------------------------------------------Lists------------------------------------------------------#
 
@@ -20,10 +21,18 @@ pastTenseList = ["blew","drank","dug","fell","grew","rode","rose","sat","threw",
 pluralAnimalList = ["leopards","panthers","wolves","tigers","jaguars","dogs","pandas","cheetahs","otters","pumas","lions","seals"]
 
 #-----------------------------------------Functions----------------------------------------------------#
+
+def printFlush(text):
+    for c in text:
+        print(c, end='')
+        sys.stdout.flush()
+        time.sleep(0.075)
+
 def topic1():
-    print("Fill in the blanks below with whatever words you like.")
+    printFlush("Fill in the blanks below with whatever words you like.")
+    print(" ")
     time.sleep(1)
-    print("If at any time you can't think of a word, just input the letter R and the program will generate a random word for you.")
+    printFlush("If at any time you can't think of a word, just input the letter R and the program will generate a random word for you.")
     time.sleep(1)
     print(" ")
     print("The theme is: Amusement Parks")
@@ -130,9 +139,10 @@ def topic1():
         print("Thanks for playing!")
 
 def topic2():
-    print("Fill in the blanks below with whatever words you like.")
+    printFlush("Fill in the blanks below with whatever words you like.")
+    print(" ")
     time.sleep(1)
-    print("If at any time you can't think of a word, just input the letter R and the program will generate a random word for you.")
+    printFlush("If at any time you can't think of a word, just input the letter R and the program will generate a random word for you.")
     time.sleep(1)
     print(" ")
     print("The theme is: Zoo Visit")
@@ -236,9 +246,10 @@ def topic2():
 
 
 def topic3():
-    print("Fill in the blanks below with whatever words you like.")
+    printFlush("Fill in the blanks below with whatever words you like.")
+    print(" ")
     time.sleep(1)
-    print("If at any time you can't think of a word, just input the letter R and the program will generate a random word for you.")
+    printFlush("If at any time you can't think of a word, just input the letter R and the program will generate a random word for you.")
     time.sleep(1)
     print(" ")
     print("The theme is: Prom")
@@ -362,6 +373,7 @@ def topicScreen():
 
 #------------------------------------------Execution-----------------------------------------------------#
 
-print("Welcome to Python Mad Libs!")
+printFlush("Welcome to Python Mad Libs!")
+print(" ")
 time.sleep(1)
 topicScreen()
