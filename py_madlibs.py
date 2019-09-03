@@ -129,17 +129,125 @@ def topic1():
         print(" ")
         print("Thanks for playing!")
 
+def topic2():
+    print("Fill in the blanks below with whatever words you like.")
+    time.sleep(1)
+    print("If at any time you can't think of a word, just input the letter R and the program will generate a random word for you.")
+    time.sleep(1)
+    print(" ")
+    print("The theme is: Zoo Visit")
+    time.sleep(1)
+    adjective1 = input("Adjective #1: ")
+    adjectiveList.append(adjective1)
+    if adjective1 == "R" or adjective1 == "r":
+        adjective1 = random.choice(adjectiveList)
+    time.sleep(.5)
+    adjective2 = input("Adjective #2: ")
+    adjectiveList.append(adjective2)
+    if adjective2 == "R" or adjective2 == "r":
+        adjective2 = random.choice(adjectiveList)
+    time.sleep(.5)
+    adjective3 = input("Adjective #3: ")
+    adjectiveList.append(adjective3)
+    if adjective3 == "R" or adjective3 == "r":
+        adjective3 = random.choice(adjectiveList)
+    time.sleep(.5)
+    adjective4 = input("Adjective #4: ")
+    adjectiveList.append(adjective4)
+    if adjective4 == "R" or adjective4 == "r":
+        adjective4 = random.choice(adjectiveList)
+    time.sleep(.5)
+    animal1 = input("Animal #1: ")
+    animalList.append(animal1)
+    if animal1 == "R" or animal1 == "r":
+        animal1 = random.choice(animalList)
+    time.sleep(.5)
+    animal2 = input("Animal #2: ")
+    animalList.append(animal2)
+    if animal2 == "R" or animal2 == "r":
+        animal2 = random.choice(animalList)
+    time.sleep(.5)
+    funnyNoise1 = input("Funny Noise #1: ")
+    funnyNoiseList.append(funnyNoiseList)
+    if funnyNoise1 == "R" or funnyNoise1 == "r":
+        funnyNoise1 = random.choice(funnyNoiseList)
+    time.sleep(.5)
+    funnyNoise2 = input("Funny Noise #2: ")
+    funnyNoiseList.append(funnyNoise2)
+    if funnyNoise2 == "R" or funnyNoise2 == "r":
+        funnyNoise2 = random.choice(funnyNoiseList)
+    time.sleep(.5)
+    bodyPart = input("Body Part: ")
+    bodyPartList.append(bodyPart)
+    if bodyPart == "R" or bodyPart == "r":
+        bodyPart = random.choice(bodyPartList)
+    time.sleep(.5)
+    pluralAnimal = input("Plural Animal: ")
+    pluralAnimalList.append(pluralAnimal)
+    if pluralAnimal == "R" or pluralAnimal == "r":
+        pluralAnimal = random.choice(pluralAnimalList)
+    time.sleep(.5)
+    pluralNoun1 = input("Plural Noun #1: ")
+    pluralNounList.append(pluralNoun1)
+    if pluralNoun1 == "R" or pluralNoun1 == "r":
+        pluralNoun1 = random.choice(pluralNounList)
+    time.sleep(.5)
+    pluralNoun2 = input("Plural Noun #2: ")
+    pluralNounList.append(pluralNoun2)
+    if pluralNoun2 == "R" or pluralNoun2 == "r":
+        pluralNoun2 = random.choice(pluralNounList)
+    time.sleep(.5)
+    pluralNoun3 = input("Plural Noun #3: ")
+    pluralNounList.append(pluralNoun3)
+    if pluralNoun3 == "R" or pluralNoun3 == "r":
+        pluralNoun3 = random.choice(pluralNounList)
+    time.sleep(.5)
+    liquidType = input("Liquid Type: ")
+    liquidList.append(liquidType)
+    if liquidType == "R" or liquidType == "r":
+        liquidType = random.choice(liquidList)
+    print("Thank you for all you inputs, your mad lib is being compiled...")
+    time.sleep(3)
+    print(" ")
+    print("Zoos are places where wild " + colored(pluralNoun1,"cyan") + " are kept in pens or cages")
+    print("so that " + colored(pluralNoun2,"cyan") + " can come and look at them. There are two")
+    print("zoos in New York, one in the Bronx and one in " + colored(adjective1,"cyan") + " Park.")
+    print("The Park zoo is built around a large pond filled with clear sparkling")
+    print(colored(liquidType,"cyan") + ". You will see several " + colored(pluralAnimal,"cyan") + " swimming in the")
+    print("pond and eating fish. When it is feeding time, all of the animals make")
+    print(colored(adjective2,"cyan") + " noises. The elephant goes " + colored(funnyNoise1,"cyan") + "and the")
+    print("turtledoves go " + colored(funnyNoise2,"cyan") + ". In one part of the zoo, there")
+    print("are " + colored(adjective3,"cyan") + " gorillas who love to eat " + colored(pluralNoun2,"cyan") + ". In another")
+    print("building, there is a spotted African " + colored(animal1,"cyan") + " that is so fast it")
+    print("can outrun a " + colored(animal2,"cyan") + ". But my favorite animal is the")
+    print("hippopotamus. It has a huge " + colored(bodyPart,"cyan") + " and eats 50 pounds")
+    print("of " + colored(pluralNoun3,"cyan") + " a day. You would never know that, technically, it's")
+    print("nothing but an oversized " + colored(adjective4,"cyan") + " pig.")
+    print(" ")
+    tryAgain = input("Would you like to try again? (Y/N): ")
+    if tryAgain == "Y" or "y":
+        time.sleep(1)
+        print(" ")
+        topicScreen()
+    elif tryAgain == "N" or "n":
+        time.sleep(1)
+        print(" ")
+        print("Thanks for playing!")
+
 
 def topicScreen():
     print("What topic would you like?")
     time.sleep(1)
     print("1.Amusement Park")
+    print("2.Zoo")
 
     time.sleep(.5)
-    topicChosen = input("1: ")
+    topicChosen = input("1/2: ")
     time.sleep(1)
     if topicChosen == "1":
-            topic1()
+        topic1()
+    elif topicChosen == "2":
+        topic2()
 
 #------------------------------------------Execution-----------------------------------------------------#
 
